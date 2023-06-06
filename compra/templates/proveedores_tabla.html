@@ -1,0 +1,32 @@
+<table class="table table-sm table-hover text-center">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre/Denominacion</th>
+      <th scope="col">Apellido/Resposabilidad</th>
+      <th scope="col">DNI/CUIL</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for p in proveedores %}
+    <tr   style="cursor:pointer" >
+      <th class="py-3" >
+        {{ p.id }}
+        <a  href="#"></a>
+      </th>
+      <td class="py-3">{{ p.nombre}}</td>
+      <td class="py-3">{{ p.apellido}}</td>
+      <td class="py-3">{{ p.numero_dni}}</td>
+      <td class="py-3">
+        <a href="{% url 'proveedor-borrar' p.id %}" >
+          <i class="fa-solid fa-trash" style="color: #b60c14;"></i>
+        </a>
+        <a href="{% url 'proveedor-editar' p.id %}" >
+          <i class="fa-solid fa-pen-to-square" style="color: #0f4ecc;"></i>
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

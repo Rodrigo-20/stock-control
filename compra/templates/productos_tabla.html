@@ -1,0 +1,43 @@
+
+  <table class="table table-sm  text-center">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Proveedor</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for p in productos %}
+    <tr onclick="mifuncion()" style="cursor:pointer" >
+      <th class="py-3" >
+        {{ p.id }}
+        <a  href="#"></a>
+      </th>
+      <td class="py-3">{{ p.nombre}}</td>
+      <td class="py-3">{{ p.precio}}</td>
+      <td class="py-3">
+        <a class="stock" href="{% url 'producto-aumentar' p.id %}" >
+           <i class="fa-solid fa-plus" style="color: #1f2e47;"></i>
+        </a>
+        {{ p.stock}}
+        <a class="stock" href="{% url 'producto-disminuir' p.id %}" >
+           <i class="fa-solid fa-minus" style="color: #24385b;"></i>
+        </a>
+      </td>
+      <td class="py-3">{{ p.proveedor}}</td>
+      <td class="py-3">
+        <a href="{% url 'producto-borrar' p.id %}" >
+           <i class="fa-solid fa-trash" style="color: #b60c14;"></i>
+        </a>
+        <a href="{% url 'producto-editar' p.id %}" >
+            <i class="fa-solid fa-pen-to-square" style="color: #0f4ecc;"></i>
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  </table>

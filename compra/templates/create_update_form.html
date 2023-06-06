@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block 'content' %}
+  <form class="p-3 w-25" action="#" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="d-flex flex-column">
+      <input class="btn btn-primary mb-3" type="submit" value=" {{submit_value}} ">
+      <a class="btn btn-danger" href="{% url on_cancel_link  %}">Volver</a>
+    </div>
+  </form>
+{% endblock %}

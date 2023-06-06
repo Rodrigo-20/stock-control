@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block 'content' %}
+    <div class="tabla-container align-self-center">
+        {% if proveedores %}
+        <a class="btn btn-primary mb-3" href="{% url 'proveedor-nuevo'  %}">Agregar Proveedor</a>
+        {% include 'proveedores_tabla.html' %}
+        {% else %}
+        <h2>No hay proveedores</h2>
+        {% endif %}
+    </div>
+{% endblock %}
