@@ -60,11 +60,11 @@ luego mostrarlos en un listado.
 Primero debemos clonar el repositorio en una carpeta:
 > git clone https://github.com/Rodrigo-20/stock-control.git
 
-LLuego tenemos que correr las migraciones de nuestra BD:
-> python manage.py migrate
-
-con un entorno de python creado, instalamos las librerias necesarias:
+Con un entorno de python creado, instalamos las librerias necesarias:
 > pip install -r requirements.txt
+
+Luego tenemos que correr las migraciones de nuestra BD:
+> python manage.py migrate
 
 Finalmente para correr el servidor utilizaremos:
 > python manage.py runserver
