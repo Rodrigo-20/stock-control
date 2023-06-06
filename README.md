@@ -57,7 +57,10 @@ luego mostrarlos en un listado.
 
 ## Instalación
 
-Primero tenemos que correr las migraciones de nuestra BD:
+Primero debemos clonar el repositorio en una carpeta:
+> git clone https://github.com/Rodrigo-20/stock-control.git
+
+LLuego tenemos que correr las migraciones de nuestra BD:
 > python manage.py migrate
 
 con un entorno de python creado, instalamos las librerias necesarias:
