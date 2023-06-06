@@ -12,6 +12,6 @@ class Proveedor(models.Model):
 
 class Producto(models.Model):
     nombre = models.CharField(max_length=50)
-    precio = models.DecimalField(decimal_places=2, max_digits=4)
+    precio = models.DecimalField(decimal_places=2, max_digits=6)
     stock = models.IntegerField(default=0)
     proveedor = models.ForeignKey(Proveedor, on_delete=models.SET_NULL, null=True)

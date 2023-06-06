@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block 'content' %}
     <div class="tabla-container align-self-center">
+        <a class="btn btn-primary mb-3" href="{% url 'producto-nuevo'  %}">Agregar Producto</a>
         {% if productos %}
-            <a class="btn btn-primary mb-3" href="{% url 'producto-nuevo'  %}">Agregar Producto</a>
             {% include 'productos_tabla.html' %}
         {% else %}
             <h2>No hay productos</h2>
